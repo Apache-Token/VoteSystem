@@ -1,0 +1,43 @@
+<main id="home" class="main" role="main">
+    <div class="container">
+        <div class="row" id="post-list">
+
+            <div class="col-xs-12 col-md-6" ng-repeat="home in homeData">
+                <article class="post tag-ad">
+                    <h2 class="post-title">
+                        <a href="#" ng-bind="home.photoTIT"></a>
+                    </h2>
+                    <div class="post-featured-image">
+                        <a class="thumbnail loaded" href="#" target="_blank">
+                            <img ng-src="{{home.photoURL}}"  width="700" height="438" alt="BootCDN">
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+
+        <!--分页-->
+        <nav class="text-center">
+            <ul class="pagination">
+                <li>
+                    <a ng-click="Previous()">
+                        <span>上一页</span>
+                    </a>
+                </li>
+                <li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}" >
+                    <a ng-click="selectPage(page)" >{{ page }}</a>
+                </li>
+                <li>
+                    <a ng-click="Next()">
+                        <span>下一页</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+</main>
+

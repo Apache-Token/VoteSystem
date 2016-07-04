@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<!--<base href="/">-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="单页面WEB Project">
+    <meta name="keywords" content="Angularjs,require">
+    <meta name="author" content="sunny@mbqianbao.com">
+    <title>Bootstrap+Angularjs+Require</title>
+    <link href="assets/bootstrap/bootstrap-css.css" type="text/css" rel="stylesheet">
+    <link href="assets/page-loading/page-loading.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Project</a>
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="home">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a ui-sref="book">Book</a></li>
+                    <li><a ui-sref="svg">Svg</a></li>
+                    <li><a ui-sref="new">New</a></li>
+                    <li><a ui-sref="contact">Contact Us</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a ui-sref="login">Login</a></li>
+                    <li><a ui-sref="sign">Sign in</a></li>
+                    <li><a ui-sref="advices">Advices</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div ui-view></div>
+
+
+    <footer class="container navbar-fixed-bottom">
+        <address class="text-center">
+            My name is Angularjs
+            <strong>@dong</strong>
+        </address>
+    </footer>
+<script src="assets/require/require.js" data-main="main.js"></script>
+</body>
+</html>
+
